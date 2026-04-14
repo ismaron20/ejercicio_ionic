@@ -1,0 +1,7 @@
+{
+  "name": "miPirmeraApp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
