@@ -12,21 +12,36 @@
       placeholder="Ingrese el titular"></ion-input>
   </ion-item>
   <ion-item>
-    <ion-textarea label="Descripcion" labelPlacement="stacked" [(ngModel)]="form.Descripcion"
+    <ion-textarea label="Descripcion" labelPlacement="stacked" [(ngModel)]="form.descripcion"
       placeholder="Ingrese la descripcion"></ion-textarea>
   </ion-item>
   <ion-item>
-    <ion-imput type="date" label="Fecha Limite" labelPlacement="stacked" [(ngModel)]="form.fechaLimite"></ion-imput>
+    <ion-input type="date" label="Fecha Limite" labelPlacement="stacked" [(ngModel)]="form.fechaLimite"></ion-input>
   </ion-item>
+
   <ion-item>
-    <ion-imput type="date" label="Fecha Limite" labelPlacement="stacked" [(ngModel)]="form. Fecha Limite"  
-    ></ion-imput>
+    <ion-select label="Estado" labelPlacement="stacked" [(ngModel)]="form.estado">
+      <ion-select-option value="pendiente">Pendiente</ion-select-option>
+      <ion-select-option value="en progreso">En progreso</ion-select-option>
+      <ion-select-option value="listo">Listo</ion-select-option>
+    </ion-select>
   </ion-item>
-  <ion-buttom expand="block" class="ion-margin-top" (click)="guardar()">
+
+  <ion-item>
+    <ion-select label="prioridad" labelPlacement="stacked" [(ngModel)]="form.prioridad">
+      <ion-select-option value="baja">Baja</ion-select-option>
+      <ion-select-option value="media">Media</ion-select-option>
+      <ion-select-option value="alta">Alta</ion-select-option>
+      </ion-select>
+  </ion-item>
+
+  <ion-item>
+    <ion-input type="Categoria" label="Categoria" labelPlacement="stacked" [(ngModel)]="form.fechaLimite"  
+    ></ion-input>
+  </ion-item>
+  <ion-button expand="block" class="ion-margin-top" (click)="guardar()">
     Guardar Tarea
-    </ion-buttom>
-    <ion-toast [isOpen]="mostrarToast" [message]="mensajeToast" duration="2000" (didDismiss)
-    ="mostrarToast = false">
-    </ion-toast
-    >
+  </ion-button>
+  <ion-toast [isOpen]="mostrarToast" [message]="mensajeToast" duration="2000" (didDismiss)="mostrarToast = false">
+  </ion-toast>
 </ion-content>
