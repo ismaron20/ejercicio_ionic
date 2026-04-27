@@ -11,4 +11,5 @@ export interface Task {
     prioridad: TaskPriority;
     categoria: string;
     completada: boolean;
+    
 }
