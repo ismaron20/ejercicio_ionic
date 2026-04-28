@@ -37,14 +37,11 @@ import { TaskPriority } from '../models/task.model'
     IonButton,
     IonSelect,
     IonSelectOption,
-    IonLabel,
     IonHeader,
     IonToolbar,
     IonTitle,
     IonContent,
-    IonToast,
- ExploreContainerComponent
-
+    IonToast
 ]
 })
 export class Tab2Page {

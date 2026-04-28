@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component,OnInit } from '@angular/core';
 import { IonHeader, IonToolbar, IonTitle, IonContent,IonList,IonItem,IonLabel,
   IonButton,IonButtons,IonIcon,IonBadge,IonSelect,IonSelectOption
 } from '@ionic/angular/standalone';
@@ -19,7 +19,7 @@ import {trash,create,checkmarkDone} from 'ionicons/icons';
    ],
 })
 export class Tab1Page implements OnInit{
-  task: Task[]=[]
+  tasks: Task[]=[]
   constructor(private taskService: TaskService) {
     addIcons({trash, create, checkmarkDone})
   }
@@ -30,7 +30,7 @@ export class Tab1Page implements OnInit{
     this.cargarTareas();
   }
   cargarTareas():void{
-    this.task = this.taskService.getTasks();
+    this.tasks = this.taskService.getTask();
   }
   async eliminar(id: string): Promise<void>{
     await this.taskService.deleteTask(id);
